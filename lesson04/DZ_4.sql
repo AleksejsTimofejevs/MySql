@@ -117,4 +117,3 @@ CREATE TABLE `likes` (
   `media_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`user_id`, `media_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
