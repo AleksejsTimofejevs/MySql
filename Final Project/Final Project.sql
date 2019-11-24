@@ -9,14 +9,14 @@ use delivery_club;
 DROP TABLE IF EXISTS restaurants;
 
 CREATE TABLE restaurants (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name varchar(150) NOT NULL,
-  adress  VARCHAR(255) NOT NULL,
-  description TEXT,
-  city ENUM ('Moscow', 'Saint Petersburg'),
-  phone VARCHAR(120) NOT NULL UNIQUE,
-  open_at TIME NOT NULL,
-  close_at TIME NOT NULL
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name varchar(150) NOT NULL,
+	adress  VARCHAR(255) NOT NULL,
+	description TEXT,
+	city ENUM ('Moscow', 'Saint Petersburg'),
+	phone VARCHAR(120) NOT NULL UNIQUE,
+	open_at TIME NOT NULL,
+	close_at TIME NOT NULL
 );
 
 -- Создаем таблицу категорий еды
@@ -31,14 +31,14 @@ CREATE TABLE food_categories (
 DROP TABLE IF EXISTS menu;
 
 CREATE TABLE menu(
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  course_name VARCHAR(100) NOT NULL,
-  price SMALLINT UNSIGNED NOT NULL,
-  description TEXT,
-  food_category_id INT UNSIGNED NOT NULL,
-  restaurant_id INT UNSIGNED NOT NULL,
-  is_available BOOLEAN DEFAULT TRUE,
-  image_id INT UNSIGNED NOT NULL
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	course_name VARCHAR(100) NOT NULL,
+	price SMALLINT UNSIGNED NOT NULL,
+	description TEXT,
+	food_category_id INT UNSIGNED NOT NULL,
+	restaurant_id INT UNSIGNED NOT NULL,
+	is_available BOOLEAN DEFAULT TRUE,
+  	image_id INT UNSIGNED NOT NULL
 );
 
 -- Создаем таблицу картинок
